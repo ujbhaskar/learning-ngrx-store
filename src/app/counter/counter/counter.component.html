@@ -1,0 +1,8 @@
+<p>counter works!</p>
+
+<app-counter-output [counter]="counter"></app-counter-output>
+<app-counter-button
+(incrementE)="onIncrement()"
+(decrementE)="onDecrement()"
+(resetE)="onReset()"
+></app-counter-button>
