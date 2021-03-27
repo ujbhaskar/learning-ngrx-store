@@ -1,8 +1,53 @@
 <p>counter works!</p>
 
-<app-counter-output [counter]="counter"></app-counter-output>
-<app-counter-button
-(incrementE)="onIncrement()"
-(decrementE)="onDecrement()"
-(resetE)="onReset()"
-></app-counter-button>
+<app-counter-output></app-counter-output>
+<app-counter-button></app-counter-button>
+<hr/><hr/>
+<div>
+  <h2>Steps for using store:</h2>
+  <ul>
+    <li>
+      Install Store:
+      <div class="shell">npm install @ngrx/store</div>
+    </li>
+    <li>
+      Create state for the counter:
+        <div class="code-block">
+        <pre>{{"const initialState: {"}}</pre>
+        <pre>{{"  counter: 0"}}</pre>
+        <pre>{{"}"}}</pre>
+      </div>
+    </li>
+    <li>
+      Create Actions:
+      <div class="code-block">
+        <pre>{{"import {createAction} from '@ngrx/store';"}}</pre>
+        <pre>{{" "}}</pre>
+        <pre>{{"export const increment = createAction('increment');"}}</pre>
+        <pre>{{"export const decrement = createAction('decrement');"}}</pre>
+        <pre>{{"export const reset = createAction('reset');"}}</pre>
+      </div>
+    </li>
+    <li>
+      Create Reducer:
+      <div class="code-block">
+        <pre>{{"const _counterReducer = createReducer("}}</pre>
+        <pre>{{"  initialState,"}}</pre>
+        <pre>{{"  on(increment, (state) => {"}}</pre>
+        <pre>{{"    return {"}}</pre>
+        <pre>{{"      ...initialState,"}}</pre>
+        <pre>{{"      counter: state.counter + 1,"}}</pre>
+        <pre>{{"    };"}}</pre>
+        <pre>{{"  }),"}}</pre>
+      </div>
+    </li>
+    <li>
+      Import the store in the app.module:
+      <div class="code-block">
+        <pre>{{"StoreModule.forRoot("}}</pre>
+        <pre>{{"  {counter: CounterReducer}"}}</pre>
+        <pre>{{")"}}</pre>
+      </div>
+    </li>
+  </ul>
+</div>

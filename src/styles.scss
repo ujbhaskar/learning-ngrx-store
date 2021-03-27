@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.code-block {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgb(241, 235, 235);
+  pre {
+    margin: 0;
+  }
+}
+
+.shell {
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
