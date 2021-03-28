@@ -1,0 +1,12 @@
+<form>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control"
+      placeholder="Enter number to increment counter"
+      name="customInput"
+      [(ngModel)]="customInput"
+    />
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="addToCounter()">Add to Counter</button>
+    </div>
+  </div>
+</form>
