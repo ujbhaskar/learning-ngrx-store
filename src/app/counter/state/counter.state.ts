@@ -1,9 +1,6 @@
-export interface counterState {
-  counter: number,
-  name: string,
-}
+import { CounterState } from 'src/app/model/counter.model';
 
-export const initialState: counterState = {
+export const initialCounterState: CounterState = {
   counter: 0,
   name: "Ujjal Bhaskar"
 };

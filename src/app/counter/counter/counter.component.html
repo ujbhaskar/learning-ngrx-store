@@ -15,7 +15,7 @@
     <li>
       Create state for the counter:
         <div class="code-block">
-        <pre>{{"const initialState: {"}}</pre>
+        <pre>{{"const initialCounterState: {"}}</pre>
         <pre>{{"  counter: 0"}}</pre>
         <pre>{{"}"}}</pre>
       </div>
@@ -34,10 +34,10 @@
       Create Reducer:
       <div class="code-block">
         <pre>{{"const _counterReducer = createReducer("}}</pre>
-        <pre>{{"  initialState,"}}</pre>
+        <pre>{{"  initialCounterState,"}}</pre>
         <pre>{{"  on(increment, (state) => {"}}</pre>
         <pre>{{"    return {"}}</pre>
-        <pre>{{"      ...initialState,"}}</pre>
+        <pre>{{"      ...initialCounterState,"}}</pre>
         <pre>{{"      counter: state.counter + 1,"}}</pre>
         <pre>{{"    };"}}</pre>
         <pre>{{"  }),"}}</pre>
