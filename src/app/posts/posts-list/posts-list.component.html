@@ -1,1 +1,7 @@
 <p>posts-list works!</p>
+<div *ngFor="let post of (posts$ | async)">
+  id: {{post.id}}<br/>
+  title: {{post.title}}<br/>
+  description: {{post.description}}<br/>
+  <hr/>
+</div>
