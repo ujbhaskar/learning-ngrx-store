@@ -13,7 +13,7 @@ describe('CustomInputComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CustomInputComponent ],
-      imports:[
+      imports: [
         StoreModule.forRoot(appReducer),
         StoreDevtoolsModule.instrument({
           logOnly: environment.production,

@@ -8,10 +8,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  },{
+  }, {
     path: 'counter',
     component: CounterComponent
-  },{
+  }, {
     path: 'posts',
     component: PostsListComponent
   }
