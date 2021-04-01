@@ -13,7 +13,7 @@ describe('CounterOutputComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CounterOutputComponent ],
-      imports:[
+      imports: [
         StoreModule.forRoot(appReducer),
         StoreDevtoolsModule.instrument({
           logOnly: environment.production,

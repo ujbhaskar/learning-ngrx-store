@@ -7,4 +7,4 @@ export const getCounter = createSelector(getCounterState, state => {
 });
 export const getName = createSelector(getCounterState, state => {
   return state.name;
-})
+});

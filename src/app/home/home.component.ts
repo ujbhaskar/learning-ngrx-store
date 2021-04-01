@@ -7,6 +7,9 @@ import { User, User1 } from '../model/user.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  numerator: number = 12345;
+  denominator: number = 23;
+  i: any;
   user: User;
   user1: User1;
   constructor() { }
@@ -21,6 +24,13 @@ export class HomeComponent implements OnInit {
       ...this.user,
       email: 'u@tcs.com'
     };
+    this.getLength();
+  }
+
+  getLength() {
+    let i = this.numerator.toString().length > this.denominator.toString().length ? this.numerator.toString().length : this.denominator.toString().length;
+    console.log(i);
+    this.i = i;
   }
 
 }

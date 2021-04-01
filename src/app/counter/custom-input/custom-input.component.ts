@@ -12,21 +12,21 @@ import { CounterState } from 'src/app/model/counter.model';
 export class CustomInputComponent implements OnInit {
   customInput: number;
   counterName: string;
-  constructor(private store:Store<{counter: CounterState}>) { }
+  constructor(private store: Store<{counter: CounterState}>) { }
 
   ngOnInit(): void {
-    this.store.select(getName).subscribe(name=>{
+    this.store.select(getName).subscribe(name => {
       console.log('fetching counter name');
       this.counterName = name;
-    })
+    });
   }
 
-  addToCounter() {
+  addToCounter(): void {
     console.log('lets add : ', this.customInput);
     this.store.dispatch(customIncrement({value: this.customInput}));
   }
 
-  changeName() {
+  changeName(): void {
     this.store.dispatch(changeCounterName());
   }
 }
