@@ -7,7 +7,7 @@ import { User, User1 } from '../model/user.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  numerator: number = 0.888;
+  numerator: number = 12345;
   denominator: number = 23;
   i: any;
   user: User;
