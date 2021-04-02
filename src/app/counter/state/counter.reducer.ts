@@ -38,6 +38,6 @@ const counterReducerFun = createReducer(
   })
 );
 
-export function counterReducer(state, action) {
+export function counterReducer(state, action): any {
   return counterReducerFun(state, action);
 }
