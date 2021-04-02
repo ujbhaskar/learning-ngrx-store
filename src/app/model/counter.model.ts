@@ -1,4 +1,4 @@
 export interface CounterState {
-  counter: number,
-  name: string,
+  counter: number;
+  name: string;
 }
