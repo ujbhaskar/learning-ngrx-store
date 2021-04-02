@@ -5,6 +5,6 @@ const postsReducerFun = createReducer(
   initialPostsState
 );
 
-export function postsReducer(state, action): any {
+export function postsReducer(state, action) {
   return postsReducerFun(state, action);
 }
