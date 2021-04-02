@@ -12,10 +12,16 @@ import { getPosts } from '../state/posts.selectors';
 })
 export class PostsListComponent implements OnInit {
   posts$: Observable<Post[]>;
-  constructor(private store: Store<AppState>) { }
+  constructor(
+    private store: Store<AppState>,
+    ) { }
 
   ngOnInit(): void {
     this.posts$ = this.store.select(getPosts);
+  }
+
+  trashPost(id: string): void {
+    console.log('trashing: ', id);
   }
 
 }

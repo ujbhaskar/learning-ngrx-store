@@ -1,7 +1,31 @@
-<p>posts-list works!</p>
-<div *ngFor="let post of (posts$ | async)">
-  id: {{post.id}}<br/>
-  title: {{post.title}}<br/>
-  description: {{post.description}}<br/>
-  <hr/>
-</div>
+<br/>
+<h3>posts-list works!</h3>
+<br/>
+<p>
+  <a href="#" routerLink="/posts/add" class="btn btn-primary">Add Post</a>
+</p>
+<table class="table table-bordered table-striped ">
+  <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of (posts$ | async)">
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.description}}</td>
+      <td>
+        <a href="#" [routerLink]="['edit', post.id]">
+          <i class='fas fa-pen'></i>
+        </a>
+        &nbsp;&nbsp;
+        <i class='fas fa-trash-alt' (click)="trashPost(post.id)"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

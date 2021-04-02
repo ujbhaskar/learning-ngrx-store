@@ -1,0 +1,31 @@
+<div>
+  <h3>Add Post Form: </h3>
+  <form [formGroup]="addPostForm">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="title"
+        class="form-control"
+        placeholder="Enter title"
+        id="title"
+        formControlName="title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="desc">Description:</label>
+      <textarea
+        class="form-control"
+        placeholder="Enter Description"
+        id="desc"
+        formControlName="description"
+      ></textarea>
+    </div>
+    {{addPostForm.valid}}
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="submitAddPost()"
+      [disabled]="addPostForm.invalid"
+    >Add Post</button>
+  </form>
+</div>
