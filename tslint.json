@@ -52,6 +52,7 @@
       "trace"
     ],
     "no-empty": false,
+    "no-shadowed-variable": false,
     "no-inferrable-types": [
       true,
       "ignore-params"
