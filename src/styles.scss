@@ -25,3 +25,14 @@
     color: red;
   }
 }
+
+.form-control {
+  &.ng-dirty.ng-touched {
+    &.ng-invalid {
+      border-right: 6px solid red;
+    }
+    &.ng-valid {
+      border-right: 6px solid #0f0;
+    }
+  }
+}
