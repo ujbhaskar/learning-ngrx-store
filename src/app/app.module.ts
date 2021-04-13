@@ -9,19 +9,24 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { environment } from 'src/environments/environment';
 import { appReducer } from './state/app.state';
-
+import { EffectsModule } from '@ngrx/effects';
+import {HttpClientModule} from '@angular/common/http';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
+    StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
     }),

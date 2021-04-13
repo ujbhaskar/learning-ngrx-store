@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AppState } from 'src/app/state/app.state';
+import { Store } from '@ngrx/store';
+import { loginStart } from '../state/auth.actions';
+import { setLoadingSpinner } from 'src/app/state/shared/shared.actions';
 
 @Component({
   selector: 'app-login',
@@ -13,13 +17,15 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required),
   });
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
   }
 
-  loginSubmit() {
+  loginSubmit(): void {
     console.log('in loginSubmit : ', this.loginForm.value);
+    this.store.dispatch(setLoadingSpinner({status: true}));
+    this.store.dispatch(loginStart({email: this.loginForm.value.email, password: this.loginForm.value.password}));
   }
 
 }
