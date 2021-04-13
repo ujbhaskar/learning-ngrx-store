@@ -4,4 +4,4 @@ export interface SharedState {
 
 export const initialState = {
   showLoading: false,
-}
+};

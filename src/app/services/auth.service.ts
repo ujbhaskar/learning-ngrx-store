@@ -13,6 +13,6 @@ export class AuthService {
   login(email: string, password: string): Observable<AuthResponse> {
     console.log('here: ', email , password);
     return this.http.post<AuthResponse>('http://localhost:8080/users/login', {
-      email, password })
+      email, password });
   }
 }

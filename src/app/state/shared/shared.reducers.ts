@@ -3,15 +3,15 @@ import { initialState } from './shared.state';
 import { setLoadingSpinner } from './shared.actions';
 
 
-const sharedReducerFun = createReducer(initialState, on(setLoadingSpinner, (state, action)=>{
+const sharedReducerFun = createReducer(initialState, on(setLoadingSpinner, (state, action) => {
   return {
     ...state,
     showLoading: action.status,
-  }
+  };
 }));
 
 
-export function SharedReducer(state, action) {
+export function SharedReducer(state, action): any {
   return sharedReducerFun(state, action);
 }
 

@@ -8,7 +8,7 @@ const authReducerFun = createReducer(initialAuthState,
       ...state,
       userData: action.authResponse.userData,
       token: action.authResponse.token
-    }
+    };
   })
 );
 
