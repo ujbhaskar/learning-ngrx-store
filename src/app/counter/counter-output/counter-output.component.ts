@@ -11,12 +11,10 @@ import { AppState } from 'src/app/state/app.state';
   styleUrls: ['./counter-output.component.scss']
 })
 export class CounterOutputComponent implements OnInit {
-  counter$: Observable<CounterState>;
   counterValue$: Observable<number>;
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.counter$ = this.store.select('counter');
     this.counterValue$ = this.store.select(getCounter);
   }
 

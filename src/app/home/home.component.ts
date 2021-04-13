@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { User, User1 } from '../model/user.model';
 
 @Component({
   selector: 'app-home',
@@ -10,20 +9,10 @@ export class HomeComponent implements OnInit {
   numerator = 12345;
   denominator = 23;
   i: any;
-  user: User;
-  user1: User1;
+
   constructor() { }
 
   ngOnInit(): void {
-    this.user = {
-      firstName: 'Ujjal',
-      lastName: 'Bhaskar'
-    };
-
-    this.user1 = {
-      ...this.user,
-      email: 'u@tcs.com'
-    };
     this.getLength();
   }
 

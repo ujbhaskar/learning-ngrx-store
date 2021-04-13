@@ -1,8 +1,11 @@
+import { Address } from './address.model';
+
 export interface User {
+  email: string;
   firstName: string;
   lastName: string;
-}
-
-export interface User1 extends User{
-  email: string;
+  password: string;
+  phoneNumber: number;
+  userType: string;
+  address: Address;
 }
